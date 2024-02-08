@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Assurez-vous qu'il n'y a pas de marge par défaut */
+    padding: 0; /* Assurez-vous qu'il n'y a pas de remplissage par défaut */
+}
+
+.categorie {
+    display: block; /* ou tu peux omettre cette ligne car c'est la valeur par défaut */
+    margin-bottom: 20px;
+    margin-left: 32px;
+}
+
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Ajuste cette valeur selon tes besoins */
+    gap: 10px; /* Espacement entre les icônes */
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5px; /* Donne un peu d'espace autour de chaque icône, ajuste selon les besoins */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon svg {
+    display: block; /* SVG se comporte comme un bloc, ce qui le rend aligné à gauche */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon:hover svg {
+    transform: scale(1.1);
+}
+
+.icon p {
+    display: block; /* S'assure que le <p> se comporte comme un bloc et est aligné à gauche */
+    color: #000000;
+    margin-top: 5px;
+    font-size: 12px;
+    margin-left: 0; /* Assurez-vous qu'il n'y a pas de marge à gauche pour aligner avec le SVG */
+}
+
+/* Styles pour la modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+}
